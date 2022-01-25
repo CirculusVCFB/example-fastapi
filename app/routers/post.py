@@ -1,6 +1,4 @@
-import mysql.connector
 import time
-from mysql.connector import errorcode
 from fastapi import FastAPI, Response,status,HTTPException,Depends, APIRouter
 from passlib.context import CryptContext
 from fastapi.params import Body
