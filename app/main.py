@@ -11,7 +11,6 @@ from . database import engine, SessionLocal, get_db
 from . routers import post, user, auth, vote
 from .config import settings
 from fastapi.middleware.cors import CORSMiddleware
-import psycopg2
 
 app = FastAPI()
 
