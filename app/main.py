@@ -1,4 +1,3 @@
-import mysql.connector
 import time
 from mysql.connector import errorcode
 from fastapi import FastAPI, Response,status,HTTPException,Depends
@@ -13,6 +12,7 @@ from . database import engine, SessionLocal, get_db
 from . routers import post, user, auth, vote
 from .config import settings
 from fastapi.middleware.cors import CORSMiddleware
+import psycopg2
 
 app = FastAPI()
 
@@ -29,19 +29,19 @@ app.add_middleware(
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated = "auto")
 models.Base.metadata.create_all(bind=engine)
 
-try:
-  cnx = mysql.connector.connect(user='root', password = 'wyzecam53$DELMY', host = 'localhost',
-                                database= 'sakila')
-  cursor = cnx.cursor(dictionary = True)
+#try:
+  #cnx = mysql.connector.connect(user='root', password = 'wyzecam53$DELMY', host = 'localhost',
+                                #database= 'sakila')
+  #cursor = cnx.cursor(dictionary = True)
 
-  print("successfully connected to the DATABASE!!")
-except mysql.connector.Error as err:
-  if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
-    print("Something is wrong with your user name or password")
-  elif err.errno == errorcode.ER_BAD_DB_ERROR:
-    print("Database does not exist")
-  else:
-    print(err)
+ # print("successfully connected to the DATABASE!!")
+#except mysql.connector.Error as err:
+  #if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+   # print("Something is wrong with your user name or password")
+  #elif err.errno == errorcode.ER_BAD_DB_ERROR:
+    #print("Database does not exist")
+  #else:
+    #print(err)
 
 
 my_posts = [{"title": "title of post1", "content": "content of post 1", "id": 1, "rating" : 4}, {"title": "favorite foods", "content": "I like pizza", 
