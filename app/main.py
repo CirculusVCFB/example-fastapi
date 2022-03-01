@@ -11,8 +11,14 @@ from . database import engine, SessionLocal, get_db
 from . routers import post, user, auth, vote
 from .config import settings
 from fastapi.middleware.cors import CORSMiddleware
+import sys, asyncio
+
+
 
 app = FastAPI()
+
+if sys.platform == "win32" and (3, 8, 0) <= sys.version_info < (3, 9, 0):
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 origins = ["*"]
 
@@ -61,8 +67,8 @@ app.include_router(auth.router)
 app.include_router(vote.router)
 
 @app.get("/")
-async def root():
-    return {"message": "Frankley's API message!!!"}
+def root():
+  return {"message": "Bind mount works at last"}
 
 
 @app.get("/sqlalchemy")
