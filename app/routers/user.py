@@ -25,8 +25,7 @@ def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
 		db.refresh(new_user)
 
 	if user_info != None:
-
-		new_user = "username exists"
+		raise HTTPException(status_code = status.HTTP_403_FORBIDDEN, detail = "Not authorized to pearform requested action")
 	return new_user
 
 
