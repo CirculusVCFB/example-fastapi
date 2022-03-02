@@ -19,10 +19,14 @@ def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
 	user.password = hashed_password
 	new_user = models.User(**user.dict())
 	user_info = db.query(models.User).filter(models.User.email == new_user.email).first()
-	print(user_info)
-	db.add(new_user)
-	db.commit()
-	db.refresh(new_user)
+	if user_info == None:
+		db.add(new_user)
+		db.commit()
+		db.refresh(new_user)
+
+	if user_info != None:
+
+		new_user = "username exists"
 	return new_user
 
 
