@@ -53,7 +53,6 @@ class Vote(BaseModel):
 	dir: conint(le = 1)
 
 class Ticket(BaseModel):
-	id: int
 	amount: int
 	lastupdated: datetime
 	username: EmailStr
