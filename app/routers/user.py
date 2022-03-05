@@ -48,7 +48,7 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 	new_ticket = models.Prizetablek10(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
-	db.refresh(new_ticket)
+	#db.refresh(new_ticket)
 
 	return new_ticket
 
