@@ -56,7 +56,7 @@ class Ticket(BaseModel):
 	id: int
 	amount: int
 	lastupdated: datetime
-	username: EmailStr
+	username: str
 	status: bool
 	activated: bool
 	class Config:
