@@ -37,9 +37,6 @@ class UserCreate(BaseModel):
 	email: EmailStr
 	password: str
 
-
-
-
 class UserLogin(BaseModel):
 	email: EmailStr
 	password: str
@@ -54,3 +51,16 @@ class TokenData(BaseModel):
 class Vote(BaseModel):
 	post_id: int
 	dir: conint(le = 1)
+
+class Ticket(BaseModel):
+	ticket_id: int
+	amount: int
+	lastupdated: datetime
+	username: EmailStr
+	status: bool
+	activated: bool
+
+class TicketCreate(BaseModel):
+	amount: int
+	status: bool = False
+	activated: bool = False

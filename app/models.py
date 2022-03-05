@@ -43,3 +43,17 @@ class Alembic(Base):
 	created_at = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
 	user_id = Column(Integer, ForeignKey("users.id", ondelete = "CASCADE"), nullable = False)
 	owner = relationship("User")
+
+
+class Prizetablek10(Base):
+	__tablename__ = "prizetablek10"
+	id = Column(Integer, primary_key=True, nullable=False, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
+
+
+
+
