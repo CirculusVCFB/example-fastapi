@@ -61,6 +61,7 @@ class Ticket(BaseModel):
 	activated: bool
 
 class TicketCreate(BaseModel):
+	id: int
 	amount: int
 	status: bool = False
 	activated: bool = False
