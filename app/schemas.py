@@ -53,7 +53,7 @@ class Vote(BaseModel):
 	dir: conint(le = 1)
 
 class Ticket(BaseModel):
-	int: int
+	id: int
 	amount: int
 	lastupdated: datetime
 	username: EmailStr
@@ -63,6 +63,7 @@ class Ticket(BaseModel):
 		orm_mode = True
 
 class TicketCreate(BaseModel):
+	id:int
 	amount: int
 	status: bool = False
 	activated: bool = False
