@@ -63,7 +63,6 @@ class Ticket(BaseModel):
 		orm_mode = True
 
 class TicketCreate(BaseModel):
-	id:int
 	amount: int
 	status: bool = False
 	activated: bool = False

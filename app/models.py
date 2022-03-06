@@ -45,8 +45,8 @@ class Alembic(Base):
 	owner = relationship("User")
 
 
-class Prizetablek10(Base):
-	__tablename__ = "prizetablek10"
+class prizetablek10(Base):
+	__tablename__ = "k10"
 	id = Column(Integer, primary_key=True, index=True)
 	amount = Column(Integer)
 	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
