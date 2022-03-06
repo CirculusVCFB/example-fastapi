@@ -37,10 +37,10 @@ def get_user(id: int, db: Session = Depends(get_db)):
 
 	return user
 
-@router.get("/tickets")
+@router.get("/tickets/grab")
 def get_ticket(db: Session = Depends(get_db)):
-	#tickets = db.query(models.Prizetablek10).all()
-	return {"tickets": "first ticket"}
+	tickets = db.query(models.Prizetablek10).all()
+	return tickets
 
 @router.post("/tickets/add", status_code = status.HTTP_201_CREATED, response_model=schemas.Ticket)
 def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
