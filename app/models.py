@@ -45,7 +45,7 @@ class Alembic(Base):
 	owner = relationship("User")
 
 
-class prizetablek10(Base):
+class Prizetablek10(Base):
 	__tablename__ = "k10"
 	id = Column(Integer, primary_key=True, index=True)
 	amount = Column(Integer)
