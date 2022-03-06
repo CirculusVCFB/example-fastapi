@@ -39,7 +39,7 @@ def get_user(id: int, db: Session = Depends(get_db)):
 
 @router.get("/tickets", response_model=List[schemas.Ticket])
 def get_ticket(db: Session = Depends(get_db)):
-	ticket = db.query(models.Prizetablek10).all()
+	ticket = db.query(models.Prizetablek10)
 	print(ticket)
 	return ticket
 
