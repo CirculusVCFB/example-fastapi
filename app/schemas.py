@@ -66,3 +66,7 @@ class TicketCreate(BaseModel):
 	amount: int
 	status: bool = False
 	activated: bool = False
+
+class TicketUpdateUser(BaseModel):
+	username: EmailStr
+	status: bool
