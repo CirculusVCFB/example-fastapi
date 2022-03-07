@@ -52,10 +52,9 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 
 	return new_ticket
 
-@router.put("/tickets/change")
-def update_ticket(db: Session = Depends(get_db)):
-	tickets = db.query(models.Prizetablek10).filter(models.Prizetablek10.username == None).first()
-	amount = tickets.amount
+@router.put("/tickets/change/{id}")
+def update_ticket(id:int, db: Session = Depends(get_db)):
+	tickets = db.query(models.Prizetablek10).filter(models.Prizetablek10.id == id).first()
 	tickets.update(ticket.dict(), synchronize_session = False)
 	db.commit()
 	return tickets
