@@ -100,4 +100,3 @@ async def update_post(id:int , updated_post: schemas.PostCreate, db: Session = D
 	db.commit()
 
 	return post_query.first()
-#
