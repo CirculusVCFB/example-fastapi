@@ -2,7 +2,8 @@ import time
 from fastapi import FastAPI, Response,status,HTTPException,Depends, APIRouter, Form
 from passlib.context import CryptContext
 from fastapi.params import Body
-from sqlalchemy.orm import Session, update
+from sqlalchemy.orm import Session
+from sqlalchemy.sql import func, update
 from typing import List
 from .. import models, schemas, utils
 from .. database import engine, SessionLocal, get_db
