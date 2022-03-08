@@ -60,7 +60,7 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
 	db.commit()
 	print(tickets)
-	return tickets_to_grab.first()
+	return ticket_to_grab.first()
 
 
 
