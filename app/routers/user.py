@@ -58,7 +58,7 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	tickets = db.query(models.Prizetablek10).filter(models.Prizetablek10.username == None)
 	tickets.update(ticket.dict(), synchronize_session = False)
 	db.commit()
-	return tickets.first()
+	return tickets
 
 
 
