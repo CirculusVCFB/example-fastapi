@@ -46,7 +46,7 @@ def get_ticket(db: Session = Depends(get_db)):
 
 @router.post("/tickets/add", status_code = status.HTTP_201_CREATED, response_model=schemas.Ticket)
 def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
-	new_ticket = models.Prizetablek10(**ticket.dict())
+	new_ticket = models.Prizetablek15(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
 	db.refresh(new_ticket)

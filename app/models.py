@@ -54,6 +54,10 @@ class Prizetablek10(Base):
 	status = Column(Boolean)
 	activated = Column(Boolean)
 
+class Prizetablek15(Prizetablek10):
+	__tablename__ = "k15"
+	pass
+
 
 
 
