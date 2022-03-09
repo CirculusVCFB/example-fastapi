@@ -54,9 +54,15 @@ class Prizetablek10(Base):
 	status = Column(Boolean)
 	activated = Column(Boolean)
 
-class Prizetablek15(Prizetablek10):
+class Prizetablek15():
 	__tablename__ = "k15"
-	pass
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
+	
 
 
 
