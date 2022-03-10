@@ -54,7 +54,7 @@ class Prizetablek10(Base):
 	status = Column(Boolean)
 	activated = Column(Boolean)
 
-class Prizetablek15():
+class Prizetablek15(Base):
 	__tablename__ = "k15"
 	id = Column(Integer, primary_key=True, index=True)
 	amount = Column(Integer)
