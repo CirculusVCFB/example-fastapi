@@ -78,13 +78,113 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 	db.commit()
 	db.refresh(new_ticket)
 	return new_ticket
+
+@router.post("/tickets/add/Prizetablek25", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek25(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
+
+
+@router.post("/tickets/add/Prizetablek50", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek50(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
 	
 
+@router.post("/tickets/add/Prizetablek60", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek60(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
 
 
+@router.post("/tickets/add/Prizetablek70", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek70(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
+
+@router.post("/tickets/add/Prizetablek80", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek80(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
+
+@router.post("/tickets/add/Prizetablek100", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek100(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
+
+@router.post("/tickets/add/Prizetablek150", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek150(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
+
+@router.post("/tickets/add/Prizetablek200", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek200(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
+
+@router.post("/tickets/add/Prizetablek250", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek250(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
 
 
+@router.post("/tickets/add/Prizetablek300", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek300(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
 
 
+@router.post("/tickets/add/Prizetablek400", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek400(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
 
 
+@router.post("/tickets/add/Prizetablek500", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek500(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
+
+@router.post("/tickets/add/Prizetablek600", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek600(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
