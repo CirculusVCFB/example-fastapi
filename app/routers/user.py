@@ -44,7 +44,7 @@ def get_ticket(db: Session = Depends(get_db)):
 	tickets = db.query(models.Prizetablek10).filter(models.Prizetablek10.username == None).first()
 	return tickets
 
-@router.post("/tickets/add/{table}", status_code = status.HTTP_201_CREATED, response_model=schemas.Ticket)
+@router.post("/tickets/add/{table}", status_code = status.HTTP_201_CREATED)
 def post_ticket(table: str, ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 	prize = table
 	#new_ticket = models.prize(**ticket.dict())
