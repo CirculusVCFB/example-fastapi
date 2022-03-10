@@ -63,7 +63,128 @@ class Prizetablek15(Base):
 	status = Column(Boolean)
 	activated = Column(Boolean)
 	
+class Prizetablek20(Base):
+	__tablename__ = "k20"
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
 
+class Prizetablek25(Base):
+	__tablename__ = "k25"
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
 
+class Prizetablek50(Base):
+	__tablename__ = "k50"
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
 
+class Prizetablek60(Base):
+	__tablename__ = "k60"
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
 
+class Prizetablek70(Base):
+	__tablename__ = "k70"
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
+
+class Prizetablek80(Base):
+	__tablename__ = "k80"
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
+
+class Prizetablek100(Base):
+	__tablename__ = "k100"
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
+
+class Prizetablek150(Base):
+	__tablename__ = "k150"
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
+
+class Prizetablek200(Base):
+	__tablename__ = "k200"
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
+
+class Prizetablek250(Base):
+	__tablename__ = "k250"
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
+
+class Prizetablek300(Base):
+	__tablename__ = "k300"
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
+
+class Prizetablek400(Base):
+	__tablename__ = "k400"
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
+
+class Prizetablek500(Base):
+	__tablename__ = "k500"
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
+
+class Prizetablek600(Base):
+	__tablename__ = "k600"
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
