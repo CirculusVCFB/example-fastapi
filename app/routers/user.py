@@ -8,11 +8,15 @@ from sqlalchemy import update
 from typing import List
 from .. import models, schemas, utils
 from .. database import engine, SessionLocal, get_db
+from enum import Enum
 
 router = APIRouter(
 	prefix = "/users",
 	tags = ["Users"]
 	)
+
+class TableName (Enum):
+	Prizetablek10_table = Prizetablek10
 
 
 @router.post("/", status_code = status.HTTP_201_CREATED, response_model=schemas.UserOut)
@@ -44,9 +48,9 @@ def get_ticket(db: Session = Depends(get_db)):
 	tickets = db.query(models.Prizetablek10).filter(models.Prizetablek10.username == None).first()
 	return tickets
 
-@router.post("/tickets/add/{table}", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(table_name: table, ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
-	new_ticket = models.table_name(**ticket.dict())
+@router.post("/tickets/add/{table_name}", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(table_name: str, ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.TableName.Prizetablek10_table(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
 	db.refresh(new_ticket)
