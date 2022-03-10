@@ -45,16 +45,6 @@ def get_ticket(db: Session = Depends(get_db)):
 	tickets = db.query(models.Prizetablek10).filter(models.Prizetablek10.username == None).first()
 	return tickets
 
-@router.post("/tickets/add", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
-	new_ticket = models.Prizetablek10(**ticket.dict())
-	db.add(new_ticket)
-	db.commit()
-	db.refresh(new_ticket)
-
-	return new_ticket
-	
-
 @router.put("/tickets/change")
 def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
 	tickets = db.query(models.Prizetablek10).filter(models.Prizetablek10.username == None).first()
@@ -63,6 +53,33 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	db.commit()
 	print(tickets)
 	return ticket_to_grab.first()
+
+
+@router.post("/tickets/add", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek10(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
+
+@router.post("/tickets/add/Prizetablek15", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek15(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
+	
+@router.post("/tickets/add/Prizetablek20", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	new_ticket = models.Prizetablek20(**ticket.dict())
+	db.add(new_ticket)
+	db.commit()
+	db.refresh(new_ticket)
+	return new_ticket
+	
+
 
 
 
