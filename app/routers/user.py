@@ -45,14 +45,15 @@ def get_ticket(db: Session = Depends(get_db)):
 	return tickets
 
 @router.post("/tickets/add/{table}", status_code = status.HTTP_201_CREATED, response_model=schemas.Ticket)
-def post_ticket(table, ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
-	print(table)
-	new_ticket = models.{table}(**ticket.dict())
-	db.add(new_ticket)
-	db.commit()
-	db.refresh(new_ticket)
+def post_ticket(table: str, ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+	prize = table
+	#new_ticket = models.prize(**ticket.dict())
+	#db.add(new_ticket)
+	#db.commit()
+	#db.refresh(new_ticket)
 
-	return new_ticket
+	#return new_ticket
+	return prize
 
 @router.put("/tickets/change")
 def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
