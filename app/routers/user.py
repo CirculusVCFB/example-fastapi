@@ -16,7 +16,7 @@ router = APIRouter(
 	)
 
 class TableName (Enum):
-	Prizetablek10_table = Prizetablek10
+	Prizetablek10_table = Prizetablek10(**ticket.dict())
 
 
 @router.post("/", status_code = status.HTTP_201_CREATED, response_model=schemas.UserOut)
@@ -50,7 +50,7 @@ def get_ticket(db: Session = Depends(get_db)):
 
 @router.post("/tickets/add/{table_name}", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
 def post_ticket(table_name: str, ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
-	new_ticket = models.TableName.Prizetablek10_table(**ticket.dict())
+	new_ticket = models.TableName.Prizetablek10_table
 	db.add(new_ticket)
 	db.commit()
 	db.refresh(new_ticket)
