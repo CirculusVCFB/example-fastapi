@@ -55,6 +55,143 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	return ticket_to_grab.first()
 
 
+@router.put("/tickets/change/Prizetablek15")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+	tickets = db.query(models.Prizetablek15).filter(models.Prizetablek15.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek15).filter(models.Prizetablek15.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+@router.put("/tickets/change/Prizetablek20")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+	tickets = db.query(models.Prizetablek20).filter(models.Prizetablek20.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek20).filter(models.Prizetablek20.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+@router.put("/tickets/change/Prizetablek25")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+	tickets = db.query(models.Prizetablek25).filter(models.Prizetablek25.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek25).filter(models.Prizetablek25.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+@router.put("/tickets/change/Prizetablek50")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+	tickets = db.query(models.Prizetablek50).filter(models.Prizetablek50.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek50).filter(models.Prizetablek50.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+@router.put("/tickets/change/Prizetablek60")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+	tickets = db.query(models.Prizetablek60).filter(models.Prizetablek60.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek60).filter(models.Prizetablek60.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+
+@router.put("/tickets/change/Prizetablek70")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+	tickets = db.query(models.Prizetablek70).filter(models.Prizetablek70.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek70).filter(models.Prizetablek70.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+@router.put("/tickets/change/Prizetablek80")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+	tickets = db.query(models.Prizetablek80).filter(models.Prizetablek80.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek80).filter(models.Prizetablek80.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+@router.put("/tickets/change/100")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+	tickets = db.query(models.Prizetablek100).filter(models.Prizetablek100.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek100).filter(models.Prizetablek100.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+@router.put("/tickets/change/Prizetablek150")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+	tickets = db.query(models.Prizetablek150).filter(models.Prizetablek150.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek150).filter(models.Prizetablek150.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+@router.put("/tickets/change/Prizetablek200")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+	tickets = db.query(models.Prizetablek200).filter(models.Prizetablek200.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek200).filter(models.Prizetablek200.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+@router.put("/tickets/change/Prizetablek250")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+	tickets = db.query(models.Prizetablek250).filter(models.Prizetablek250.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek250).filter(models.Prizetablek250.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+@router.put("/tickets/change/Prizetablek300")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+	tickets = db.query(models.Prizetablek300).filter(models.Prizetablek300.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek300).filter(models.Prizetablek300.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+@router.put("/tickets/change/Prizetablek400")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+	tickets = db.query(models.Prizetablek400).filter(models.Prizetablek400.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek400).filter(models.Prizetablek400.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+@router.put("/tickets/change/Prizetablek500")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+	tickets = db.query(models.Prizetablek500).filter(models.Prizetablek500.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek500).filter(models.Prizetablek500.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+@router.put("/tickets/change/Prizetablek600")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+	tickets = db.query(models.Prizetablek600).filter(models.Prizetablek600.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek600).filter(models.Prizetablek600.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+
 @router.post("/tickets/add", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
 def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 	new_ticket = models.Prizetablek10(**ticket.dict())
