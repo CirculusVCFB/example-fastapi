@@ -119,7 +119,7 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	print(tickets)
 	return ticket_to_grab.first()
 
-@router.put("/tickets/change/100")
+@router.put("/tickets/change/Prizetablek100")
 def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
 	tickets = db.query(models.Prizetablek100).filter(models.Prizetablek100.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek100).filter(models.Prizetablek100.id == tickets.id )
