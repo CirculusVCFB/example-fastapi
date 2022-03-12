@@ -71,3 +71,6 @@ class TicketUpdateUser(BaseModel):
 	username: EmailStr
 	class Config:
 		orm_mode = True
+
+class TicketAmount(BaseModel):
+	amount:int
