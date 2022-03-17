@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.sql import func, update
 from sqlalchemy import update
 from typing import List
-from .. import models, schemas, utils
+from .. import models, schemas, utils, oauth2
 from .. database import engine, SessionLocal, get_db
 from enum import Enum
 
