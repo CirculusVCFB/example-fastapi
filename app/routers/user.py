@@ -46,7 +46,8 @@ def get_ticket(db: Session = Depends(get_db),current_user: int = Depends(oauth2.
 	return tickets
 
 @router.put("/tickets/change/prizetablek10")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek10).filter(models.Prizetablek10.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek10).filter(models.Prizetablek10.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
@@ -56,7 +57,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 
 
 @router.put("/tickets/change/prizetablek15")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek15).filter(models.Prizetablek15.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek15).filter(models.Prizetablek15.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
