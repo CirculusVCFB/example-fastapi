@@ -67,7 +67,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	return ticket_to_grab.first()
 
 @router.put("/tickets/change/prizetablek20")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek20).filter(models.Prizetablek20.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek20).filter(models.Prizetablek20.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
@@ -76,7 +77,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	return ticket_to_grab.first()
 
 @router.put("/tickets/change/prizetablek25")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek25).filter(models.Prizetablek25.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek25).filter(models.Prizetablek25.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
@@ -85,7 +87,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	return ticket_to_grab.first()
 
 @router.put("/tickets/change/prizetablek50")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek50).filter(models.Prizetablek50.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek50).filter(models.Prizetablek50.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
@@ -94,7 +97,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	return ticket_to_grab.first()
 
 @router.put("/tickets/change/prizetablek60")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek60).filter(models.Prizetablek60.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek60).filter(models.Prizetablek60.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
@@ -104,7 +108,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 
 
 @router.put("/tickets/change/prizetablek70")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek70).filter(models.Prizetablek70.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek70).filter(models.Prizetablek70.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
@@ -113,7 +118,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	return ticket_to_grab.first()
 
 @router.put("/tickets/change/prizetablek80")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek80).filter(models.Prizetablek80.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek80).filter(models.Prizetablek80.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
@@ -122,7 +128,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	return ticket_to_grab.first()
 
 @router.put("/tickets/change/prizetablek100")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek100).filter(models.Prizetablek100.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek100).filter(models.Prizetablek100.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
@@ -131,7 +138,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	return ticket_to_grab.first()
 
 @router.put("/tickets/change/prizetablek150")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek150).filter(models.Prizetablek150.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek150).filter(models.Prizetablek150.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
@@ -140,7 +148,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	return ticket_to_grab.first()
 
 @router.put("/tickets/change/prizetablek200")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek200).filter(models.Prizetablek200.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek200).filter(models.Prizetablek200.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
@@ -149,7 +158,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	return ticket_to_grab.first()
 
 @router.put("/tickets/change/prizetablek250")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek250).filter(models.Prizetablek250.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek250).filter(models.Prizetablek250.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
@@ -158,7 +168,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	return ticket_to_grab.first()
 
 @router.put("/tickets/change/prizetablek300")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek300).filter(models.Prizetablek300.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek300).filter(models.Prizetablek300.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
@@ -167,7 +178,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	return ticket_to_grab.first()
 
 @router.put("/tickets/change/prizetablek400")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek400).filter(models.Prizetablek400.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek400).filter(models.Prizetablek400.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
@@ -176,7 +188,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	return ticket_to_grab.first()
 
 @router.put("/tickets/change/prizetablek500")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek500).filter(models.Prizetablek500.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek500).filter(models.Prizetablek500.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
@@ -185,7 +198,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	return ticket_to_grab.first()
 
 @router.put("/tickets/change/prizetablek600")
-def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket):
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek600).filter(models.Prizetablek600.username == None).first()
 	ticket_to_grab = db.query(models.Prizetablek600).filter(models.Prizetablek600.id == tickets.id )
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
@@ -195,7 +209,8 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 
 
 @router.post("/tickets/add", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek10(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
@@ -203,7 +218,8 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 	return new_ticket
 
 @router.post("/tickets/add/Prizetablek15", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek15(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
@@ -211,7 +227,8 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 	return new_ticket
 	
 @router.post("/tickets/add/Prizetablek20", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek20(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
@@ -219,7 +236,8 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 	return new_ticket
 
 @router.post("/tickets/add/Prizetablek25", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek25(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
@@ -228,7 +246,8 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 
 
 @router.post("/tickets/add/Prizetablek50", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek50(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
@@ -237,7 +256,8 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 	
 
 @router.post("/tickets/add/Prizetablek60", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek60(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
@@ -246,7 +266,8 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 
 
 @router.post("/tickets/add/Prizetablek70", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek70(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
@@ -254,7 +275,8 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 	return new_ticket
 
 @router.post("/tickets/add/Prizetablek80", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek80(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
@@ -262,7 +284,8 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 	return new_ticket
 
 @router.post("/tickets/add/Prizetablek100", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek100(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
@@ -270,7 +293,8 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 	return new_ticket
 
 @router.post("/tickets/add/Prizetablek150", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek150(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
@@ -278,7 +302,8 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 	return new_ticket
 
 @router.post("/tickets/add/Prizetablek200", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek200(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
@@ -286,7 +311,8 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 	return new_ticket
 
 @router.post("/tickets/add/Prizetablek250", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek250(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
@@ -295,7 +321,8 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 
 
 @router.post("/tickets/add/Prizetablek300", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek300(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
@@ -304,7 +331,8 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 
 
 @router.post("/tickets/add/Prizetablek400", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek400(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
@@ -313,7 +341,8 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 
 
 @router.post("/tickets/add/Prizetablek500", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek500(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
@@ -321,7 +350,8 @@ def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
 	return new_ticket
 
 @router.post("/tickets/add/Prizetablek600", status_code = status.HTTP_201_CREATED,response_model=schemas.Ticket)
-def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db)):
+def post_ticket(ticket: schemas.TicketCreate, db: Session = Depends(get_db),
+	current_user: int = Depends(oauth2.get_current_user)):
 	new_ticket = models.Prizetablek600(**ticket.dict())
 	db.add(new_ticket)
 	db.commit()
