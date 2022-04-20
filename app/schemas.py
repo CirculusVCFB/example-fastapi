@@ -69,6 +69,7 @@ class TicketCreate(BaseModel):
 
 class TicketUpdateUser(BaseModel):
 	username: EmailStr
+	status: bool
 	class Config:
 		orm_mode = True
 
