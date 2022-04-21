@@ -70,6 +70,9 @@ class TicketCreate(BaseModel):
 class TicketUpdateUser(BaseModel):
 	username: EmailStr
 	status: bool
+	started: bool
+	completed: bool
+	withdrawn: bool
 	class Config:
 		orm_mode = True
 
