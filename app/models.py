@@ -53,6 +53,9 @@ class Prizetablek10(Base):
 	username = Column(String(1000))
 	status = Column(Boolean)
 	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
 
 class Prizetablek15(Base):
 	__tablename__ = "k15"
