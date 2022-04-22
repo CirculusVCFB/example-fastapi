@@ -58,7 +58,7 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 @router.put("/tickets/complete/prizetablek10")
 def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
 	current_user: int = Depends(oauth2.get_current_user)):
-	tickets = db.query(models.Prizetablek10).filter(models.Prizetablek10.username == ticket.username).first()
+	tickets = db.query(models.Prizetablek10).filter(models.Prizetablek10.username == ticket.username)
 	print("The tickets are")
 	print(tickets)
 	return tickets
