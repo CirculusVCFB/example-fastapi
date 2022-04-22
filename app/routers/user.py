@@ -60,7 +60,6 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	tickets = db.query(models.Prizetablek10).filter(models.Prizetablek10.username == ticket.username)
 	print("The tickets are")
 	print(tickets)
-	return tickets
 
 
 
