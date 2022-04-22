@@ -59,8 +59,10 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), current_user: int = Depends(oauth2.get_current_user)):
 	tickets = db.query(models.Prizetablek10).filter(models.Prizetablek10.username == "royalty200@gmail.com").first()
 	ticket_to_grab = db.query(models.Prizetablek10).filter(models.Prizetablek10.id == tickets.id )
-	print("The tickets are")
-	print(ticket_to_grab)
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	return ticket_to_grab
+	
 
 
 
