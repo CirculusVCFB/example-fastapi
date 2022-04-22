@@ -55,6 +55,19 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	print(tickets)
 	return ticket_to_grab.first()
 
+@router.put("/tickets/complete/prizetablek10")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
+	tickets = db.query(models.Prizetablek10).filter(models.Prizetablek10.username == ticket.username,
+	 models.Prizetablek10.started = True, models.Prizetablek10.completed = False).first()
+	ticket_to_grab = db.query(models.Prizetablek10).filter(models.Prizetablek10.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+
+
 
 @router.put("/tickets/change/prizetablek15")
 def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
