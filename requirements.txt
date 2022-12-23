@@ -1,7 +1,6 @@
 alembic==1.7.5
 anyio==3.4.0
 asgiref==3.4.1
-backports.zoneinfo==0.2.1
 bcrypt==3.2.0
 cffi==1.15.0
 click==8.0.3
@@ -41,4 +40,5 @@ unicorn==1.0.3
 uvicorn==0.16.0
 watchgod==0.7
 websockets==10.1
-zipp==3.7.0
+zipp==3.7.0s
+backports.zoneinfo;python_version<"3.9"
