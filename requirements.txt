@@ -40,5 +40,5 @@ unicorn==1.0.3
 uvicorn==0.16.0
 watchgod==0.7
 websockets==10.1
-zipp==3.7.0s
+zipp==3.9.0s
 backports.zoneinfo;python_version<"3.9"
