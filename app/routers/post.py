@@ -22,7 +22,7 @@ router = APIRouter(
 	#Left SQL for future reference
 	#cursor.execute("SELECT * FROM posts")
 	#posts = cursor.fetchall()
-	#print(limit)
+	# print(limit)
 	#posts = db.query(models.Post).filter(models.Post.title.contains(search)).limit(limit).offset(skip).all()
 
 	#posts = db.query(models.Post, func.count(models.Vote.post_id).label("votes")).join(models.Vote, models.Vote.post_id == models.Post.id,
