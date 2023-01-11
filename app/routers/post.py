@@ -5,7 +5,7 @@ from fastapi.params import Body
 from typing import List, Optional
 from sqlalchemy.orm import Session
 from sqlalchemy.sql import func
-from .. import models, schemas, utils, oauth2
+from .. import models, schemas, utils 
 from .. database import engine, SessionLocal, get_db
 
 
