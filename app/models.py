@@ -78,6 +78,9 @@ class Prizetablek20(Base):
 	username = Column(String(1000))
 	status = Column(Boolean)
 	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
 
 class Prizetablek25(Base):
 	__tablename__ = "k25"
@@ -87,6 +90,10 @@ class Prizetablek25(Base):
 	username = Column(String(1000))
 	status = Column(Boolean)
 	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
+
 
 class Prizetablek50(Base):
 	__tablename__ = "k50"
@@ -96,6 +103,9 @@ class Prizetablek50(Base):
 	username = Column(String(1000))
 	status = Column(Boolean)
 	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
 
 class Prizetablek60(Base):
 	__tablename__ = "k60"
@@ -105,6 +115,9 @@ class Prizetablek60(Base):
 	username = Column(String(1000))
 	status = Column(Boolean)
 	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
 
 class Prizetablek70(Base):
 	__tablename__ = "k70"
@@ -114,6 +127,9 @@ class Prizetablek70(Base):
 	username = Column(String(1000))
 	status = Column(Boolean)
 	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
 
 class Prizetablek80(Base):
 	__tablename__ = "k80"
@@ -123,6 +139,9 @@ class Prizetablek80(Base):
 	username = Column(String(1000))
 	status = Column(Boolean)
 	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
 
 class Prizetablek100(Base):
 	__tablename__ = "k100"
@@ -132,6 +151,9 @@ class Prizetablek100(Base):
 	username = Column(String(1000))
 	status = Column(Boolean)
 	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
 
 class Prizetablek150(Base):
 	__tablename__ = "k150"
@@ -141,6 +163,9 @@ class Prizetablek150(Base):
 	username = Column(String(1000))
 	status = Column(Boolean)
 	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
 
 class Prizetablek200(Base):
 	__tablename__ = "k200"
@@ -150,6 +175,9 @@ class Prizetablek200(Base):
 	username = Column(String(1000))
 	status = Column(Boolean)
 	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
 
 class Prizetablek250(Base):
 	__tablename__ = "k250"
@@ -159,6 +187,9 @@ class Prizetablek250(Base):
 	username = Column(String(1000))
 	status = Column(Boolean)
 	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
 
 class Prizetablek300(Base):
 	__tablename__ = "k300"
@@ -168,6 +199,9 @@ class Prizetablek300(Base):
 	username = Column(String(1000))
 	status = Column(Boolean)
 	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
 
 class Prizetablek400(Base):
 	__tablename__ = "k400"
@@ -177,6 +211,9 @@ class Prizetablek400(Base):
 	username = Column(String(1000))
 	status = Column(Boolean)
 	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
 
 class Prizetablek500(Base):
 	__tablename__ = "k500"
@@ -186,6 +223,9 @@ class Prizetablek500(Base):
 	username = Column(String(1000))
 	status = Column(Boolean)
 	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
 
 class Prizetablek600(Base):
 	__tablename__ = "k600"
@@ -195,3 +235,6 @@ class Prizetablek600(Base):
 	username = Column(String(1000))
 	status = Column(Boolean)
 	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
