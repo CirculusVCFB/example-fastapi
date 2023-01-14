@@ -343,8 +343,6 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 
 # The 300s start here
 
-
-
 @router.put("/tickets/change/prizetablek300")
 def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
 	current_user: int = Depends(oauth2.get_current_user)):
@@ -362,11 +360,6 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
 	db.commit()
 	return ticket_to_grab.first()
-
-
-
-
-
 
 # The 400s start here
 
