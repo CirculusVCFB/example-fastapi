@@ -74,6 +74,78 @@ def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db
 	return ticket_to_grab.first()
 
 
+# The 2s Start here
+
+@router.put("/tickets/change/prizetablek2")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
+	tickets = db.query(models.Prizetablek2).filter(models.Prizetablek2.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek2).filter(models.Prizetablek2.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+
+
+
+@router.put("/tickets/complete/prizetablek2")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket, current_user: int = Depends(oauth2.get_current_user)):
+	tickets = db.query(models.Prizetablek2).filter(models.Prizetablek2.username == ticket.username, models.Prizetablek2.started == True, models.Prizetablek2.completed == False).first()
+	ticket_to_grab = db.query(models.Prizetablek2).filter(models.Prizetablek2.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	return ticket_to_grab.first()
+
+# The 3s Start here
+
+
+@router.put("/tickets/change/prizetablek3")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
+	tickets = db.query(models.Prizetablek3).filter(models.Prizetablek3.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek3).filter(models.Prizetablek3.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+
+
+
+@router.put("/tickets/complete/prizetablek3")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket, current_user: int = Depends(oauth2.get_current_user)):
+	tickets = db.query(models.Prizetablek3).filter(models.Prizetablek3.username == ticket.username, models.Prizetablek3.started == True, models.Prizetablek3.completed == False).first()
+	ticket_to_grab = db.query(models.Prizetablek3).filter(models.Prizetablek3.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	return ticket_to_grab.first()
+
+
+# The 4s Start here
+
+
+@router.put("/tickets/change/prizetablek4")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket,
+	current_user: int = Depends(oauth2.get_current_user)):
+	tickets = db.query(models.Prizetablek4).filter(models.Prizetablek4.username == None).first()
+	ticket_to_grab = db.query(models.Prizetablek4).filter(models.Prizetablek4.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	print(tickets)
+	return ticket_to_grab.first()
+
+
+
+
+@router.put("/tickets/complete/prizetablek4")
+def update_ticket(ticket: schemas.TicketUpdateUser, db: Session = Depends(get_db), response_model=schemas.Ticket, current_user: int = Depends(oauth2.get_current_user)):
+	tickets = db.query(models.Prizetablek4).filter(models.Prizetablek4.username == ticket.username, models.Prizetablek4.started == True, models.Prizetablek4.completed == False).first()
+	ticket_to_grab = db.query(models.Prizetablek4).filter(models.Prizetablek4.id == tickets.id )
+	ticket_to_grab.update(ticket.dict(), synchronize_session = False)
+	db.commit()
+	return ticket_to_grab.first()
+
 
 
 
