@@ -58,7 +58,7 @@ class Prizetablek1(Base):
 
 
 
-class Prizetablek1(Base):
+class Prizetablek2(Base):
 	__tablename__ = "k2"
 	id = Column(Integer, primary_key=True, index=True)
 	amount = Column(Integer)
@@ -71,7 +71,7 @@ class Prizetablek1(Base):
 	withdrawn = Column(Boolean)
 
 
-class Prizetablek1(Base):
+class Prizetablek3(Base):
 	__tablename__ = "k3"
 	id = Column(Integer, primary_key=True, index=True)
 	amount = Column(Integer)
@@ -84,7 +84,7 @@ class Prizetablek1(Base):
 	withdrawn = Column(Boolean)
 
 
-class Prizetablek1(Base):
+class Prizetablek4(Base):
 	__tablename__ = "k4"
 	id = Column(Integer, primary_key=True, index=True)
 	amount = Column(Integer)
