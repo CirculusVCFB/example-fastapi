@@ -44,6 +44,17 @@ class Alembic(Base):
 	user_id = Column(Integer, ForeignKey("users.id", ondelete = "CASCADE"), nullable = False)
 	owner = relationship("User")
 
+class Prizetablek1(Base):
+	__tablename__ = "k1"
+	id = Column(Integer, primary_key=True, index=True)
+	amount = Column(Integer)
+	lastupdated = Column(TIMESTAMP(timezone = True ), nullable = False, server_default = text('now()'))
+	username = Column(String(1000))
+	status = Column(Boolean)
+	activated = Column(Boolean)
+	started = Column(Boolean)
+	completed = Column(Boolean)
+	withdrawn = Column(Boolean)
 
 class Prizetablek10(Base):
 	__tablename__ = "k10"
